@@ -1,2 +1,6 @@
-<h1>Scenes#edit</h1>
-<p>Find me in app/views/scenes/edit.html.erb</p>
+<h3>Update a Scene</h3>
+<%= form_with model: @scene do |form| %>
+  <%= form.text_field :Title, placeholder: "Title" %>
+  <%= form.text_field :Description, placeholder: "Description" %>
+  <%= form.submit %>
+<% end %>
