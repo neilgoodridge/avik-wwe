@@ -4,5 +4,5 @@
 <h4>"<%= @scene.description %>"</h4>
 
 <button><%= link_to 'Edit', edit_scene_path %> </button>
-<button><%= link_to 'Delete' %> </button>
+<button><%= link_to 'Remove', scene_path, method: 'delete', data: { confirm: 'Are you sure?' } %></button>
 
