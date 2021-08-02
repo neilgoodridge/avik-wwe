@@ -32,7 +32,7 @@ class ScenesController < ApplicationController
     @scene = Scene.find(params[:id])
     @scene.destroy
 
-    redirect_to scenes_path
+    redirect_to root_path
   end
 
   private

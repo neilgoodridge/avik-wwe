@@ -1,3 +1,5 @@
+<button><%= link_to 'Home', root_path %> </button>
+
 <h3>Create a Scene</h3>
 <%= form_with model: @scene do |form| %>
   <%= form.text_field :title, placeholder: "Title" %>
