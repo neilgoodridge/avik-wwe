@@ -1,5 +1,3 @@
-<h1>Scenes#index</h1>
-<p>Find me in app/views/scenes/index.html.erb</p>
 <ul>
   <% @scenes.each do |scene| %>
     <li><%= link_to scene.title, scene_path(scene)  %></li>
