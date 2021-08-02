@@ -1,8 +1,10 @@
-<button><%= link_to 'Home', root_path %> </button>
+<div class="container">
+  <button><%= link_to 'Home', root_path %> </button>
 
-<h3>Create a Scene</h3>
-<%= form_with model: @scene do |form| %>
-  <%= form.text_field :title, placeholder: "Title" %>
-  <%= form.text_field :description, placeholder: "Description" %>
-  <%= form.submit %>
-<% end %>
+  <h3>Create a Scene</h3>
+  <%= form_with model: @scene do |form| %>
+    <%= form.text_field :title, placeholder: "Title" %>
+    <%= form.text_field :description, placeholder: "Description" %>
+    <%= form.submit %>
+  <% end %>
+</div>

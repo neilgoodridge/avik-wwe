@@ -2,6 +2,11 @@ class ScenesController < ApplicationController
   # skip_before_action :authenticate_user!, only: :index
   def index
     @scenes = Scene.all
+    if params[:query].present?
+      @scenes = Scene.where(title: ILIKE ?", "%#{params[:query]}%")
+    else
+      @scenes = Scene.all
+    end
   end
 
   def show
@@ -18,8 +23,8 @@ class ScenesController < ApplicationController
 
   def create
     @scene = Scene.create(scene_params)
-
-    redirect_to scenes_path
+    @scene.save
+    redirect_to scenes_path(@scene)
   end
 
   def update
