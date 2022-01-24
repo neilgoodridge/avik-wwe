@@ -2,13 +2,12 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-8">
-      <div id="movies">
-        <ul>
+      <div id="scenes">
+        <ol>
         <% @scenes.each do |scene| %>
           <li><%= link_to scene.title, scene_path(scene)  %></li>
         <% end %>
-        </ul>
-
+        </ol>
       </div>
       <button><%= link_to "Add a New Scene", new_scene_path %></button>
 

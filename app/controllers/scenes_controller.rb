@@ -2,11 +2,11 @@ class ScenesController < ApplicationController
   # skip_before_action :authenticate_user!, only: :index
   def index
     @scenes = Scene.all
-    if params[:query].present?
-      @scenes = Scene.where(title: ILIKE ?", "%#{params[:query]}%")
-    else
-      @scenes = Scene.all
-    end
+    # if params[:query].present?
+    #   @scenes = Scene.where(title: ILIKE ?", "%#{params[:query]}%")
+    # else
+    #   @scenes = Scene.all
+    # end
   end
 
   def show
