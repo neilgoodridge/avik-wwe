@@ -1,7 +1,5 @@
-<%= form_for @scene  do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+<%= simple_form_for @scene  do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
   <%= f.submit %>
 <% end %>
