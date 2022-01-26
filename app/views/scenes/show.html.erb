@@ -7,6 +7,6 @@
 
   <button><%= link_to 'Edit', edit_scene_path %> </button>
   <button><%= link_to 'Add Images', edit_scene_path %> </button>
-  <button><%= link_to 'Remove', scene_path, method: 'delete', data: { confirm: 'Are you sure?' } %></button>
+  <button><%= link_to 'Remove', scene_path(@scene), method: :delete, data: { confirm: 'Are you 100% sure?' } %></button>
 
 </div>

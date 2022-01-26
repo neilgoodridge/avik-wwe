@@ -2,12 +2,13 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-8">
+      <h1>Avik's WWE Dioramas!!</h1>
       <div id="scenes">
-        <ol>
+        <ul>
         <% @scenes.each do |scene| %>
-          <li><%= link_to scene.title, scene_path(scene)  %></li>
+          <li> <h5><%= link_to scene.title, scene_path(scene)%></h5></li>
         <% end %>
-        </ol>
+        </ul>
       </div>
       <button><%= link_to "Add a New Scene", new_scene_path %></button>
 

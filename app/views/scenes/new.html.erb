@@ -1,12 +1,7 @@
 <div class="container">
   <div class="col-lg-12">
     <button><%= link_to 'Home', root_path %> </button>
-
     <h3>Create a Scene</h3>
-    <%= form_with model: @scene do |form| %>
-      <%= form.text_field :title, placeholder: "Title" %>
-      <%= form.text_field :description, placeholder: "Description" %>
-      <%= form.submit %>
-    <% end %>
+    <%= render 'form' %>
   </div>
 </div>
