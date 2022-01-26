@@ -1,6 +1,7 @@
 class ScenesController < ApplicationController
   # skip_before_action :authenticate_user!, only: :index
   before_action :find_scene, only: [:show, :edit, :update, :destroy]
+
   def index
     @scenes = Scene.all
   end
@@ -13,7 +14,7 @@ class ScenesController < ApplicationController
   end
 
   def create
-    @scene = Scene.create(scene_params)
+    @scene = Scene.new(scene_params)
     @scene.save
     redirect_to scenes_path(@scene)
   end
