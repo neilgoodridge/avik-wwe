@@ -1,9 +1,10 @@
 class Scene < ApplicationRecord
 
   # belongs_to :user
-  # has_many_attached :photos
+  has_many :images
+  has_many :wrestlers
 
-  validates :title, :description, presence: true
+  validates :title, :description, :image, presence: true
 
   include PgSearch::Model
   pg_search_scope :search_by_title_and_description,
