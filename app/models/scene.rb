@@ -1,7 +1,8 @@
 class Scene < ApplicationRecord
 
   # belongs_to :user
-  # has_one_attached :photo
+  # has_many_attached :photos
+
   validates :title, :description, presence: true
 
   include PgSearch::Model

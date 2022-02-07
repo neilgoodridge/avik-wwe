@@ -1,7 +1,11 @@
-<div class="container">
-
-  <h2><%= @scene.title %></h2>
-  <h5><%= @scene.description %></h5>
+<div class="container show-container">
+  <div class="show">
+    <h2><%= @scene.title %></h2>
+    <h5><%= @scene.description %></h5>
+    <div class="scene-image">
+      <%= @scene.image %>
+    </div>
+  </div>
   <div class="buttons">
     <button><%= link_to 'Edit', edit_scene_path %> </button>
     <button><%= link_to 'Add Images', edit_scene_path %> </button>
