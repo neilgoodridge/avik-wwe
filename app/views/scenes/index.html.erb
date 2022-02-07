@@ -1,18 +1,24 @@
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-8">
-      <h1>Avik's WWE Dioramas!!</h1>
-      <div id="scenes">
-        <ul>
-        <% @scenes.each do |scene| %>
-          <li> <h5><%= link_to scene.title, scene_path(scene)%></h5>
-          <h6><%= scene.description %> </h6> </li>
-        <% end %>
-        </ul>
-      </div>
-      <button><%= link_to "Add a New Scene", new_scene_path %></button>
-
-    </div>
+<div class="banner" style="background-image: url(images/background.png);">
+  <div class="container">
+    <h1>Avik's Fig Fed!!</h1>
+    <p>See the most famous moments in WWE history played out in painstaking, scene-by-scene detail using the official WWE action figures of your favourite stars.</p>
   </div>
 </div>
+
+<div class="container">
+  <div class="cards">
+    <% @scenes.each do |scene| %>
+    <% link_to scene_path(scene)%>
+    <div class="card">
+      <div class="title">
+        <h5><%= link_to scene.title %> </h5>
+      </div>
+      <div class="description">
+        <h6><%= scene.description %> </h6>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <button><%= link_to "Add a New Scene", new_scene_path %></button>
+</div>
+
