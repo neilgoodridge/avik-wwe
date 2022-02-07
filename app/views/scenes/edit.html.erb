@@ -1,13 +1,9 @@
 <div class="container">
-  <button><%= link_to 'Home', root_path %> </button>
-
-  <h3>Update a Scene</h3>
-  <h4>Current title: </h4><p><%= @scene.title %></p>
-  <h4>Current description:</h4> <p><%= @scene.description %> </p>
-  <h5>Please add a new title and/or description below</h5>
-
-  <div>
-    <%= render 'form' %>
+  <div class="update-container">
+    <h3>Update a Scene</h3>
+    <h5>Please add a new title and/or description below</h5>
+    <div class="form">
+      <%= render 'form' %>
+    </div>
   </div>
-
 </div>
