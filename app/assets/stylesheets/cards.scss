@@ -16,12 +16,16 @@
   border: 1px solid rgb(230,230,230);
   margin: 10px;
   .title { margin-top: 50%;}
+
+  // &:hover {
+  //   cursor: pointer;
+  // }
 }
+
 
 .cards {
   display: grid;
   grid-template-columns: auto auto auto;
-  // grid-gap: 10px;
 }
 
 h1 {
