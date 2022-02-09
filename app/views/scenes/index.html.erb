@@ -1,24 +1,22 @@
 <div class="banner" style="background-image: url(images/background.png);">
   <div class="container">
-    <h1>Avik's Fig Fed</h1>
+    <h1>Avi's Fig Fed</h1>
     <p>See the most famous moments in WWE history played out in painstaking, scene-by-scene detail using the official WWE action figures of your favourite stars.</p>
   </div>
-</div>
-
-<div class="container">
-  <div class="cards">
-    <% @scenes.each do |scene| %>
-    <% scene_path(scene)%>
-    <div class="card">
-      <div class="title">
-        <h5><%= link_to scene.title, scene_path(scene) %> </h5>
+  <div class="container">
+    <div class="cards">
+      <% @scenes.each do |scene| %>
+      <% scene_path(scene)%>
+      <div class="card">
+        <div class="title">
+          <h5><%= link_to scene.title, scene_path(scene) %> </h5>
+        </div>
+        <div class="description">
+          <h6><%= scene.description %> </h6>
+        </div>
       </div>
-      <div class="description">
-        <h6><%= scene.description %> </h6>
-      </div>
+      <% end %>
     </div>
-    <% end %>
+    <button><%= link_to "Add a New Scene", new_scene_path %></button>
   </div>
-  <button><%= link_to "Add a New Scene", new_scene_path %></button>
 </div>
-

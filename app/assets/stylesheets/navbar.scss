@@ -6,15 +6,39 @@
 .nav-link {
   color: #999999;
   border: 1px solid #999999;
-  padding: 8px 50px;
-  border-radius: 4px;
+  padding: 4px 30px;
+  width: 80px;
+  text-align: center;
+  border-radius: 3px;
   font-weight: lighter;
-  opacity: 1;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+    border: 1px solid darkgrey;
+    color: #999999;
+    transition: 0.2s ease;
+  }
 }
-
-.nav-link:hover {
-  opacity: 0.6;
-  text-decoration: none;
-  color: #999999;
-  transition: 0.3s ease;
+.navbar-nav {
+  margin-left: auto;
+  margin-right: 15px;
+}
+.dropdown-item {
+  border: 1px solid #999999;
+  border-radius: 3px;
+  font-weight: lighter;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    border: 1px solid darkgrey;
+    text-decoration: none;
+    font-weight: light;
+    background-color: white;
+    transition: 0.2s ease;
+  }
+}
+.navbar-toggler {
+  margin-right: 5px;
+  padding: 0.25rem 0.5rem;
 }

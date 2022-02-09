@@ -1,7 +1,7 @@
 class Scene < ApplicationRecord
 
   # belongs_to :user
-  has_many :images
+  has_one_attached :photo
   has_many :wrestlers
 
   validates :title, :description, :image, presence: true

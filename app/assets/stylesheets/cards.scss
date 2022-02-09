@@ -1,11 +1,7 @@
-.card img {
-  width: 150px;
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
-
-.card h6 {
-  opacity: .5;
-}
-
 .card {
   width: auto;
   height: 300px;
@@ -21,13 +17,13 @@
     cursor: pointer;
   }
 }
-
-
-.cards {
-  display: grid;
-  grid-template-columns: auto auto auto;
+.card img {
+  width: 150px;
 }
 
+.card h6 {
+  opacity: .5;
+}
 h1 {
   text-align: center;
 }
