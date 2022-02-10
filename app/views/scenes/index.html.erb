@@ -5,8 +5,8 @@
   </div>
   <div class="container">
     <div class="cards">
-      <% @scenes.each do |scene| %>
-      <% scene_path(scene)%>
+      <% @scenes.each do |scene|%>
+      <% root_path(scene)%>
       <div class="card">
         <div class="title">
           <h5><%= link_to scene.title, scene_path(scene) %> </h5>
